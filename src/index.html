@@ -1,17 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RayDeanTech | Landing Page</title>
+
+  <!-- recompiled CSS with custom theme color -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  
+  <!-- style for this index -->
+  <link rel="stylesheet" href="./styles.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
+
+  <!-- IMPORTANT NOTE:  main, left-panel, & right-panel wrappers are not controlled by bootstrap's grid system -->
+  <main class="main-flexbox-container">
+
+    <section class="left-panel">
+      <img class="headshot" src="./images/profile_1500x1000.jpg">
+    </section>
+
+
+    <section class="right-panel">
+
+      <!-- leading intro -->
+      <article id="leadIntro">
+        <!-- <h1 class="display-2 text-primary fw-semibold">Raymond Dean</h1> -->
+        <h1 class="display-2 text-primary fw-semibold">Raymond Dean</h1>
+        <p class="lead">Development, Automation, Systems Administration, and Escalated Tech Support</p>
+        <p>You're looking for a tenaciously-spirited Technical Fellow - an advocate that seeks to understand what's
+          under the hood. You're seeking a Web Application Developer who cuts through red tape, understands your
+          business workflows, and can integrate disparate systems. You want Raymond Dean, an IT Professional
+          with ~20 years of perspective supporting a diverse set of industries. With enthusiasm, he'll work for you
+          - or with you - but never against you. Explore what he's been doing below.</p>
+      </article>
+
+      <!-- engagement button row -->
+      <div class="engageButtons">
+        <!-- <button type="button" class="btn btn-lg btn-primary me-1">Resume</button> -->
+        <a class="btn btn-lg btn-primary me-1" href="#" role="button">Resume</a>
+        <button type="button" class="btn btn-lg btn-primary me-1" data-bs-toggle="modal"
+          data-bs-target="#servicesModal">Services</button>
+        <!-- <button type="button" class="btn btn-lg btn-primary me-1">Demos</button> -->
+        <a class="btn btn-lg btn-primary me-1" href="#" role="button">Demos</a>
+      </div>
+
+      <!-- social button row -->
+      <div class="socialButtons">
+        <button type="button" class="btn btn-outline-primary btn-circle btn-circle-lg me-1"><i
+            class="fa-brands fa-github"></i></button>
+        <button type="button" class="btn btn-outline-primary btn-circle btn-circle-lg me-1"><i
+            class="fa-brands fa-stack-overflow"></i></button>
+        <button type="button" class="btn btn-outline-primary btn-circle btn-circle-lg me-1"><i
+            class="fa-brands fa-linkedin"></i></button>
+      </div>
+
+    </section>
+
   </main>
+
+
+
+
+  <!-- Services Modal -->
+  <div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="servicesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="servicesModalLabel">Ray's Services</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="bd-example">
+
+            <p class="lead">As a foray into self-employment, I'm open to freelancing! Tap into my ~20 years of
+              experience, and hire me for virtually any IT Support or Web Development project.</p>
+
+            <h4>Web Application Development</h4>
+
+            <p>Got a design idea? Let me build it out! Alternatively, I can support and troubleshoot your preexisting
+              web application - frontend or backend.</p>
+
+            <h4>Database Development</h4>
+            <p>That report you've been looking for is just around the corner. I'm available to build, support, and
+              troubleshoot both SQL databases and JavaScript backends. This includes writing human-readable SQL queries,
+              interfacing with your database, and getting CSV or JSON into - or out of - Microsoft SQL or MySQL.</p>
+
+            <h4>IT Consulting</h4>
+            <p>Don't have time to research? Let me do it for you! I can explore cloud-based services (Azure, AWS,
+              Digital Ocean, Linode, Rackspace, etc.) and discover affordable options for your end goals. Additionally,
+              I can identify ways to help you tap into your preexisting ecommerce solutions.</p>
+
+            <h4>Technical Support</h4>
+            <p>Do you need a one-man Service Desk? I'm well-versed in supporting the technical needs of employees.
+              Additionally, I'm familiar with administering thousands of user & computer accounts, group policies, and
+              can develop automation scripts in PowerShell to automate onboarding.</p>
+
+            <h4>Computer Repair</h4>
+            <p>I'm A+ certified and can remedy a majority of computer issues. I'm happy to RMA parts, install
+              motherboards, or crawl under desks. I'm accustomed to unboxing, imaging, and deploying hundreds of PCs in
+              a given amount of time.</p>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- bootstrap and popper bundle -->
+    <script defer src="./js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
