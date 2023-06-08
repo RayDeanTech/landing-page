@@ -19,6 +19,7 @@ body {
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+    background: url('./images/left_panel.jpg');
 }
 
 .right-panel {
@@ -56,7 +57,9 @@ body {
 
     .headshot {
         height: 50vh;
+        background: url('./images/top_panel.jpg');
     }
+
 
 }
 
